@@ -1,0 +1,24 @@
+/* upload photo */
+
+.upload-photo {
+    margin-top: 54px;
+}
+
+.upload-photo input {
+    display: none;
+}
+
+.upload-photo label {
+    cursor: pointer;
+    background-color: #0E80BF;
+    border-radius: 4px;
+    color: white;
+    padding: 10px 14px;
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+.upload-photo span {
+    font-size: 18px;
+    font-weight: 600;
+}

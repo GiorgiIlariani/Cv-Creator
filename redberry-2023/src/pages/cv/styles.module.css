@@ -1,0 +1,71 @@
+/* right-side */
+.right-side {
+    width: 822px;
+    height: 1080px;
+    padding: 50px 0 50px 75px;
+}
+
+.personal-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* image */
+.photo {
+    width: 246px;
+    height: 246px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.personal-info h2 {
+    color: #F93B1D;
+    font-size: 34px;
+}
+
+.personal-info h4 {
+    color: #F93B1D;
+    font-size: 20px;
+    margin: 35px 0 15px 0;
+}
+
+.personal-info .mail {
+    margin: 17px 0 10px 0;
+}
+
+.personal-info p {
+    width: 432px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+.personal-info p img {
+    margin-right: 12px;
+}
+
+/* .experience h4 {
+    color: #F93B1D;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.experience {
+    border-top: 1px solid #C8C8C8;
+    margin-top: 20px;
+    padding-top: 24px;
+}
+
+.experience .position {
+    font-weight: 600;
+}
+
+.experience .dates {
+    margin: 10px 0 18px 0;
+}
+
+.experience .description {
+    font-size: 18px;
+    line-height: 1.3;
+} */

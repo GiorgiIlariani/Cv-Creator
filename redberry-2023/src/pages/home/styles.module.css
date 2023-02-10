@@ -1,0 +1,38 @@
+.home {
+    padding: 0 70px;
+    background-image: url('../../../public/assets/images/backgroundPhoto.png');
+    background-size: cover;
+    height: 100vh;
+    background-color: #fff;
+}
+
+
+.home header {
+    border-bottom: 1px solid #1A1A1A;
+    padding: 25px 0;
+    height: 90px;
+}
+
+.home main {
+    height: calc(100vh - 90px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home main img {
+    width: 300px;
+    position: absolute;
+    margin-top: 4rem;
+    margin-left: 18rem;
+}
+
+.home main button {
+    width: 464px;
+    padding: 18px 60px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 20px;
+    background-color: #000;
+    cursor: pointer;
+}

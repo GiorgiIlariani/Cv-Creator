@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "HelveticaNeue"
+}
+
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url(./assets/font/HelveticaNeue.ttc);
+}
+
+/* input in general */
+input {
+    width: 100%;
+    border: 1px solid #BCBCBC;
+    margin: 8px 0;
+    padding: 14px 16px;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+textarea {
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    border: 1px solid #BCBCBC;
+    border-radius: 4px;
+    margin-top: 8px;
+    outline: none;
+    padding: 13px 16px;
+    resize: none;
+    height: 150px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.textarea {
+    margin-top: 35px;
+}
+
+::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.none-display {
+    width: 100%;
+}
+
+.input-div label {
+    font-weight: 600;
+}
+
+.textarea label {
+    font-weight: 600;
+}
+
+
+/* left side */
+.left-side {
+    width: 1098px;
+    height: 1080px;
+    background: #f9f9f9;
+    padding: 0 150px;
+
+}
+
+/* forms */
+.form-container {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    position: relative;
+}
+
+.display-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.display-container>div {
+    width: 371px;
+}
+
+.input-div {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.input-div>p {
+    font-weight: 300;
+    font-size: 14px;
+}
+
+
+/* btn more */
+.btn-more {
+    width: 289px;
+    background: #62A1EB;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 15px 0;
+    border: none;
+    border-radius: 4px;
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+/* validation */
+.invalid input {
+    border: 1px solid #b40e0e;
+    background: url('./assets/images/danger.png');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 20px);
+}
+
+.invalid input:focus {
+    border-color: #ff8800;
+    background-color: #fbe8d2;
+}
+
+.invalid label {
+    color: #b40e0e;
+}
+
+.invalid p {
+    color: #b40e0e;
+}
+
+.error-text {
+    color: #b40e0e;
+}
+
+.success {
+    border-color: #98E37E;
+    background: url('./assets/images/success.png');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 20px);
+}
+
+.success-border {
+    border-color: #98E37E;
+}
+
+.danger-border {
+    border-color: #b40e0e;
+}
+
+/*  border */
+#border {
+    border-bottom: 1px solid #C8C8C8;
+    padding-bottom: 50px;
+}
