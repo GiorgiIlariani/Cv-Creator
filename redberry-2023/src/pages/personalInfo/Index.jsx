@@ -91,7 +91,6 @@ const PersonalInfo = () => {
     if (e.target.files && e.target.files[0]) {
       let reader = new FileReader();
       reader.onload = (e) => {
-        // setIsImageUploaded(true);
         setImage(e.target.result);
       };
       reader.readAsDataURL(e.target.files[0]);
