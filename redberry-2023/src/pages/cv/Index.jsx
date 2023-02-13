@@ -10,24 +10,8 @@ const Resume = ({
   phoneNumber,
   textarea,
   image,
-  position,
-  employer,
-  start_date,
-  due_date,
-  description,
+  experience,
 }) => {
-  const experienceData = {
-    position,
-    employer,
-    start_date,
-    due_date,
-    description,
-  };
-
-  const formData = [];
-
-  formData.push(experienceData);
-
   return (
     <div className={classes["right-side"]}>
       <div className={classes["personal-info"]}>
@@ -55,20 +39,21 @@ const Resume = ({
           <img src={image} className={classes.photo} alt="person-img" />
         ) : null}
       </div>
-      {formData.map((data) => {
-        return (
-          <div className={classes.experience}>
-            <h4>გამოცდილება</h4>
-            <p className={classes.position}>
-              {data.position} {data.employer}
-            </p>
-            <p className={classes.dates}>
-              {data.start_date} {data.due_date}
-            </p>
-            <p className={classes.description}>{data.description}</p>
-          </div>
-        );
-      })}
+      {experience !== undefined &&
+        experience.map((data, i) => {
+          return (
+            <div className={classes.experience} key={i}>
+              <h4>გამოცდილება</h4>
+              <p className={classes.position}>
+                {data.position} {data.employer}
+              </p>
+              <p className={classes.dates}>
+                {data.start_date} {data.due_date}
+              </p>
+              <p className={classes.description}>{data.description}</p>
+            </div>
+          );
+        })}
     </div>
   );
 };

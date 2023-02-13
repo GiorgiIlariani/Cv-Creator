@@ -1,65 +1,84 @@
 import React from "react";
 
-const MoreExperience = (props) => {
+const MoreExperience = ({
+  handleChange,
+  experience,
+  index,
+  firstDateTouched,
+  lastDateTouched,
+  descriptionTouched,
+  positionTouched,
+  employerTouched
+}) => {
   return (
     <>
-      <div className={props.positionInputClasses}>
+      <div className='input-div'>
         <label htmlFor="position">თანამდებობა</label>
         <input
-          className={props.positionIsValid ? "success" : null}
+          // className={
+          //   experience[index].position !== ""
+          //     ? "success"
+          //     : positionTouched && experience[index].position === ""
+          //     ? "danger"
+          //     : null
+          // }
           type="text"
           name="position"
-          value={props.enteredPosition}
-          onChange={props.positionChangedHandler}
-          onBlur={props.positionBlurHandler}
           placeholder="დეველოპერი, დიზაინერი და ა.შ"
+          value={experience !== null ? experience[index]?.position : ""}
+          onChange={(e) => handleChange(e, index)}
         />
         <p>მინიმუმ ორი სიმბოლო</p>
       </div>
-      <div className={props.employerInputClasses}>
+      <div className='input-div'>
         <label htmlFor="employer">დამსაქმებელი</label>
         <input
-          className={props.employerIsValid ? "success" : null}
+          // className={
+          //   experience[index].employer !== ""
+          //     ? "success"
+          //     : employerTouched && experience[index].employer === ""
+          //     ? "invalid"
+          //     : null
+          // }
           type="text"
           name="employer"
-          value={props.enteredEmployer}
-          onChange={props.employerChangedHandler}
-          onBlur={props.employerBlurHandler}
           placeholder="დამსაქმებელი"
+          value={experience !== null ? experience[index]?.employer : ""}
+          onChange={(e) => handleChange(e, index)}
         />
         <p>მინიმუმ ორი სიმბოლო</p>
       </div>
       <div className="display-container">
         <div className="input-div">
-          <label htmlFor="startDate">დაწყების რიცხვო</label>
+          <label htmlFor="start_date">დაწყების რიცხვო</label>
           <input
-            className={
-              props.firstDateValue !== ""
-                ? "success-border"
-                : props.firstDateTouched && props.firstDateValue === ""
-                ? "danger-border"
-                : null
-            }
+            // className={
+            //   experience[index].start_date !== ""
+            //     ? "success-border"
+            //     : firstDateTouched && experience[index].start_date === ""
+            //     ? "danger-border"
+            //     : null
+            // }
             type="date"
-            name="startDate"
-            onChange={(e) => props.setFirstDateValue(e.target.value)}
-            value={props.firstDateValue}
+            name="start_date"
+            value={experience !== null ? experience[index]?.start_date : ""}
+            onChange={(e) => handleChange(e, index)}
           />
         </div>
         <div className="input-div">
-          <label htmlFor="dueDate">დამთავრების რიცხვი</label>
+          <label htmlFor="due_date">დამთავრების რიცხვი</label>
           <input
-            className={
-              props.lastDateValue !== ""
-                ? "success-border"
-                : props.lastDateTouched && props.lastDateValue === ""
-                ? "danger-border"
-                : null
-            }
+            // className={
+            //   experience[index].due_date !== ""
+            //     ? "success-border"
+            //     : lastDateTouched && experience[index].due_date === ""
+            //     ? "danger-border"
+            //     : null
+            // }
             type="date"
-            name="dueDate"
-            onChange={(e) => props.setLastDateValue(e.target.value)}
-            value={props.lastDateValue}
+            name="due_date"
+            value={experience !== null ? experience[index]?.due_date : ""}
+            onChange={(e) => handleChange(e, index)}
           />
         </div>
       </div>
@@ -67,17 +86,17 @@ const MoreExperience = (props) => {
       <div className="textarea" id="border">
         <label htmlFor="description">აღწერა</label>
         <textarea
-          className={
-            props.descriptionValue !== ""
-              ? "success-border"
-              : props.descriptionTouched && props.descriptionValue === ""
-              ? "danger-border"
-              : null
-          }
+          // className={
+          //   experience[index].description !== ""
+          //     ? "success-border"
+          //     : descriptionTouched && experience[index].description === ""
+          //     ? "danger-border"
+          //     : null
+          // }
           name="description"
-          placeholder="როლი თანამდებობაზე და ზოგადი აღწერა"
-          onChange={(e) => props.setDescriptionValue(e.target.value)}
-          value={props.descriptionValue}></textarea>
+          value={experience !== null ? experience[index]?.description : ""}
+          onChange={(e) => handleChange(e, index)}
+          placeholder="როლი თანამდებობაზე და ზოგადი აღწერა"></textarea>
       </div>
     </>
   );

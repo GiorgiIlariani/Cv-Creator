@@ -9,6 +9,7 @@ import PersonalInfo from "./pages/personalInfo/Index";
 import Experience from "./pages/experience/Index";
 import Education from "./pages/education/Index";
 import Resume from "./pages/cv/Index";
+import FinishedResume from './pages/finishedResume/index'
 
 
 
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/experience" element={<Experience />} />
         <Route path="/education" element={<Education />} />
         <Route path="/resume" element={<Resume />} />
+        <Route path="/finishedResume" element={<FinishedResume />} />
       </Routes>
     </>
   );
